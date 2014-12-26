@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dip"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/linel_Text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="名称：" />
+
+        <EditText
+            android:id="@+id/edit_Text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入..." />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/linel_Text"
+        android:fillViewport="true"
+        android:visibility="visible" >
+
+        <com.lisheng.wordwrap.view.AutoNewLineLinearLayout
+            android:id="@+id/linel_TestNewLine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </com.lisheng.wordwrap.view.AutoNewLineLinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
